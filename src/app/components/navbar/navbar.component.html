@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <a routerLink="/" class="logo">
+    <img src="images/logo.png" alt="LadyLive" class="logo-img" />
+    <span class="logo-text">LadyLive</span>
+  </a>
+  <ul class="nav-links">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact Agent</a></li>
+  </ul>
+  <a routerLink="/contact" class="nav-cta">Contact Agent</a>
+</nav>
