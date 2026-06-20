@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postbuild": "cp dist/blog/browser/index.html dist/blog/browser/404.html",
+    "preview": "npm run build && npx --yes serve -s dist/blog/browser -l 4200",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

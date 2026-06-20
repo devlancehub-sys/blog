@@ -1,0 +1,10 @@
+talkymate.com, www.talkymate.com {
+	# Point to the Angular build output (upload dist/blog/browser/ here)
+	root * /var/www/talkymate
+
+	encode gzip zstd
+
+	# SPA fallback: /pricing, /contact, etc. → index.html
+	try_files {path} /index.html
+	file_server
+}
