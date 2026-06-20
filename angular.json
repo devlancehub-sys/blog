@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lady-live": {
+    "blog": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/lady-live",
+            "outputPath": "dist/blog",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -86,10 +86,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "lady-live:build:production"
+              "buildTarget": "blog:build:production"
             },
             "development": {
-              "buildTarget": "lady-live:build:development"
+              "buildTarget": "blog:build:development"
             }
           },
           "defaultConfiguration": "development"

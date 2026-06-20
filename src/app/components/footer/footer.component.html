@@ -1,7 +1,18 @@
 <footer class="footer">
   <div class="footer-inner">
-    <img src="images/logo.png" alt="LadyLive" class="footer-logo" />
-    <p class="footer-tagline">LadyLive – Connect. Chat. Share.</p>
-    <p class="footer-copy">&copy; {{ year }} LadyLive. Static demo.</p>
+    <img src="images/logo.png" alt="TalkyMate" class="footer-logo" />
+    <p class="footer-tagline">TalkyMate – Voice Call Entertainment</p>
+    <nav class="footer-links">
+      <a routerLink="/privacy">Privacy Policy</a>
+      <a routerLink="/terms">Terms &amp; Conditions</a>
+      <a routerLink="/refund">Refund Policy</a>
+      <a routerLink="/contact">Contact Us</a>
+    </nav>
+    <p class="footer-contact">
+      <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+      &nbsp;|&nbsp;
+      <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a>
+    </p>
+    <p class="footer-copy">&copy; {{ year }} TalkyMate. All rights reserved.</p>
   </div>
 </footer>

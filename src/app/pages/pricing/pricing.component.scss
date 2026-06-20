@@ -1,0 +1,115 @@
+@use '../content-page';
+
+.pricing-main {
+  max-width: 960px;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.services-section,
+.pricing-section {
+  margin-bottom: 2.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(233, 30, 140, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    color: var(--accent-pink);
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+.pricing-note {
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.pricing-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid rgba(233, 30, 140, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+
+  &.popular {
+    border-color: var(--accent-pink);
+    box-shadow: 0 8px 32px rgba(233, 30, 140, 0.15);
+  }
+}
+
+.popular-badge {
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-pink-purple);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.plan-name {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.plan-price {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: var(--gradient-pink-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.plan-credits {
+  margin: 0.25rem 0 0.75rem;
+  color: var(--accent-pink);
+  font-weight: 600;
+}
+
+.plan-desc {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.billing-info {
+  margin-top: 1rem;
+}

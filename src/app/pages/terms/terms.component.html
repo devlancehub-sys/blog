@@ -1,0 +1,102 @@
+<div class="content-page">
+  <div class="content-overlay"></div>
+  <div class="content-background" role="presentation"></div>
+  <div class="content-wrapper">
+    <app-navbar />
+    <main class="content-main">
+      <h1 class="page-title">Terms &amp; Conditions</h1>
+      <p class="page-intro">
+        Last updated: {{ site.lastUpdated }}. By using TalkyMate, you agree to these Terms &amp; Conditions.
+      </p>
+      <div class="content-body">
+        <h2>1. About TalkyMate</h2>
+        <p>
+          TalkyMate is a voice-call entertainment platform operated in India. We provide digital wallet credits
+          that users can use for voice-based entertainment calls with hosts on our mobile application.
+        </p>
+
+        <h2>2. Eligibility</h2>
+        <p>
+          You must be at least 18 years of age to use TalkyMate. By creating an account or making a payment,
+          you confirm that you meet this requirement and that the information you provide is accurate.
+        </p>
+
+        <h2>3. Services</h2>
+        <p>TalkyMate offers:</p>
+        <ul>
+          <li>Voice call entertainment services between users and hosts</li>
+          <li>Digital wallet recharge for call credits</li>
+          <li>Account management, call history, and support services</li>
+        </ul>
+        <p>
+          TalkyMate is for entertainment purposes only. We do not provide dating, matchmaking, medical,
+          legal, or professional counselling services.
+        </p>
+
+        <h2>4. Payments</h2>
+        <p>
+          Wallet recharges are processed through secure third-party payment gateways including Cashfree.
+          All prices are displayed in Indian Rupees (INR). Upon successful payment, credits are added to
+          your TalkyMate wallet. You are responsible for maintaining sufficient credits for voice calls.
+        </p>
+
+        <h2>5. User Conduct</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Harass, abuse, or threaten hosts or other users</li>
+          <li>Share illegal, offensive, or inappropriate content during calls</li>
+          <li>Attempt to bypass billing or misuse the platform</li>
+          <li>Share personal financial details or passwords during calls</li>
+          <li>Use TalkyMate for any unlawful purpose</li>
+        </ul>
+        <p>Violation of these rules may result in account suspension or termination without refund.</p>
+
+        <h2>6. Host Services</h2>
+        <p>
+          Hosts on TalkyMate are independent entertainment providers. TalkyMate facilitates connections but
+          does not guarantee availability, call quality, or specific outcomes from any conversation.
+        </p>
+
+        <h2>7. Account Termination</h2>
+        <p>
+          We may suspend or terminate accounts that violate these terms or our community guidelines.
+          You may delete your account by contacting support at
+          <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a>.
+        </p>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>
+          TalkyMate is provided on an "as is" basis. We are not liable for indirect, incidental, or consequential
+          damages arising from use of our services. Our total liability shall not exceed the amount paid by
+          you to TalkyMate in the preceding 3 months.
+        </p>
+
+        <h2>9. Intellectual Property</h2>
+        <p>
+          All TalkyMate branding, app design, and platform content are owned by TalkyMate. You may not copy,
+          modify, or distribute our materials without written permission.
+        </p>
+
+        <h2>10. Governing Law</h2>
+        <p>
+          These Terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction
+          of courts in India.
+        </p>
+
+        <h2>11. Changes to Terms</h2>
+        <p>
+          We may update these Terms &amp; Conditions at any time. Continued use of TalkyMate after updates
+          constitutes acceptance of the revised terms.
+        </p>
+
+        <h2>12. Contact</h2>
+        <p>
+          For questions about these Terms, contact us at
+          <a [href]="'mailto:' + site.email">{{ site.email }}</a> or visit our
+          <a routerLink="/contact">Contact Us</a> page.
+        </p>
+      </div>
+    </main>
+    <app-footer />
+  </div>
+</div>

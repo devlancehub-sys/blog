@@ -1,0 +1,9 @@
+@use '../content-page';
+
+.features-page-main {
+  max-width: 960px;
+
+  app-features {
+    display: block;
+  }
+}

@@ -10,6 +10,15 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
+}
+
+.cta-text {
+  width: 100%;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
 }
 
 .cta-section .btn-primary,

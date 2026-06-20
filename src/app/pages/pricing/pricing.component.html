@@ -1,0 +1,56 @@
+<div class="content-page">
+  <div class="content-overlay"></div>
+  <div class="content-background" role="presentation"></div>
+  <div class="content-wrapper">
+    <app-navbar />
+    <main class="content-main pricing-main">
+      <h1 class="page-title">Pricing &amp; Services</h1>
+      <p class="page-intro">
+        TalkyMate provides voice-call entertainment services. Recharge your wallet with credits and use them for voice calls with hosts.
+      </p>
+
+      <section class="services-section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          @for (service of services; track service.title) {
+            <article class="service-card">
+              <h3>{{ service.title }}</h3>
+              <p>{{ service.desc }}</p>
+            </article>
+          }
+        </div>
+      </section>
+
+      <section class="pricing-section">
+        <h2 class="section-title">Wallet Recharge Plans</h2>
+        <p class="pricing-note">All prices are in INR (₹). Credits are added to your TalkyMate wallet after successful payment.</p>
+        <div class="pricing-grid">
+          @for (plan of plans; track plan.name) {
+            <article class="pricing-card" [class.popular]="plan.popular">
+              @if (plan.popular) {
+                <span class="popular-badge">Most Popular</span>
+              }
+              <h3 class="plan-name">{{ plan.name }}</h3>
+              <p class="plan-price">₹{{ plan.price }}</p>
+              <p class="plan-credits">{{ plan.credits }} Credits</p>
+              <p class="plan-desc">{{ plan.description }}</p>
+            </article>
+          }
+        </div>
+      </section>
+
+      <section class="content-body billing-info">
+        <h2>Billing Information</h2>
+        <ul>
+          <li>Voice calls are charged per minute based on the host rate.</li>
+          <li>Credits are deducted from your wallet during active calls.</li>
+          <li>Payments are processed securely through Cashfree payment gateway.</li>
+          <li>Unused wallet credits remain in your account until used.</li>
+          <li>For refund details, see our <a routerLink="/refund">Refund &amp; Cancellation Policy</a>.</li>
+        </ul>
+        <p>Questions about pricing? Contact us at <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a>.</p>
+      </section>
+    </main>
+    <app-footer />
+  </div>
+</div>

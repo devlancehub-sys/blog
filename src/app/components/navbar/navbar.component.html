@@ -1,11 +1,23 @@
 <nav class="navbar">
-  <a routerLink="/" class="logo">
-    <img src="images/logo.png" alt="LadyLive" class="logo-img" />
-    <span class="logo-text">LadyLive</span>
+  <a routerLink="/" class="logo" (click)="closeMenu()">
+    <img src="images/logo.png" alt="TalkyMate" class="logo-img" />
+    <span class="logo-text">TalkyMate</span>
   </a>
-  <ul class="nav-links">
-    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active">Contact Agent</a></li>
+
+  <button type="button" class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+    <span class="menu-bar"></span>
+    <span class="menu-bar"></span>
+    <span class="menu-bar"></span>
+  </button>
+
+  <ul class="nav-links" [class.open]="menuOpen()">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About Us</a></li>
+    <li><a routerLink="/features" routerLinkActive="active" (click)="closeMenu()">Features</a></li>
+    <li><a routerLink="/pricing" routerLinkActive="active" (click)="closeMenu()">Pricing</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a></li>
+    <li><a routerLink="/privacy" routerLinkActive="active" (click)="closeMenu()">Privacy Policy</a></li>
+    <li><a routerLink="/terms" routerLinkActive="active" (click)="closeMenu()">Terms &amp; Conditions</a></li>
+    <li><a routerLink="/refund" routerLinkActive="active" (click)="closeMenu()">Refund Policy</a></li>
   </ul>
-  <a routerLink="/contact" class="nav-cta">Contact Agent</a>
 </nav>

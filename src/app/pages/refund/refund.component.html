@@ -1,0 +1,76 @@
+<div class="content-page">
+  <div class="content-overlay"></div>
+  <div class="content-background" role="presentation"></div>
+  <div class="content-wrapper">
+    <app-navbar />
+    <main class="content-main">
+      <h1 class="page-title">Refund &amp; Cancellation Policy</h1>
+      <p class="page-intro">
+        Last updated: {{ site.lastUpdated }}. This policy explains refunds and cancellations for TalkyMate wallet recharges and services.
+      </p>
+      <div class="content-body">
+        <h2>1. Nature of Service</h2>
+        <p>
+          TalkyMate provides digital wallet credits for voice-call entertainment services. Once credits are
+          added to your wallet after a successful payment, they are considered delivered digital goods.
+        </p>
+
+        <h2>2. Wallet Recharge Refunds</h2>
+        <p>Refunds for wallet recharges may be considered in the following cases:</p>
+        <ul>
+          <li>Payment was deducted but credits were not added to your wallet</li>
+          <li>Duplicate payment for the same recharge order</li>
+          <li>Technical error on TalkyMate's side during payment processing</li>
+        </ul>
+        <p>
+          Refund requests must be submitted within 7 days of the transaction to
+          <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a> with your registered phone
+          number, transaction ID, and payment date.
+        </p>
+
+        <h2>3. Non-Refundable Items</h2>
+        <p>The following are generally not eligible for refund:</p>
+        <ul>
+          <li>Credits already used for completed voice calls</li>
+          <li>Partially used wallet balance</li>
+          <li>Account termination due to violation of Terms &amp; Conditions</li>
+          <li>Dissatisfaction with a host or call experience (subject to review on case-by-case basis)</li>
+        </ul>
+
+        <h2>4. Call Cancellations</h2>
+        <p>
+          If a call ends due to network issues on either side, credits are charged only for the duration of
+          the active call. If you believe you were incorrectly charged, contact support with call details
+          within 48 hours.
+        </p>
+
+        <h2>5. Refund Processing</h2>
+        <p>
+          Approved refunds are processed to the original payment method within 7–10 business days, depending
+          on your bank or payment provider. Cashfree and banking partners may take additional time to reflect
+          the refund in your account.
+        </p>
+
+        <h2>6. Cancellation of Recharge</h2>
+        <p>
+          Once a wallet recharge payment is successful and credits are credited, the transaction cannot be
+          cancelled. Please verify the recharge amount before completing payment.
+        </p>
+
+        <h2>7. Disputes</h2>
+        <p>
+          For payment disputes, contact us first at
+          <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a>. We will investigate and
+          respond within 3–5 business days.
+        </p>
+
+        <h2>8. Contact for Refunds</h2>
+        <p>
+          Email: <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a><br />
+          Or visit our <a routerLink="/contact">Contact Us</a> page.
+        </p>
+      </div>
+    </main>
+    <app-footer />
+  </div>
+</div>

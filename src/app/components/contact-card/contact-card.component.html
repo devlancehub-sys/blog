@@ -1,12 +1,53 @@
-<div class="contact-card">
-  <div class="card-inner">
-    <h2 class="card-title">Contact Agent</h2>
+<div class="contact-layout">
+  <section class="contact-info">
+    <h2 class="card-title">Get in Touch</h2>
     <p class="card-support">
-      Need help or have questions? Our support team is here for you via WhatsApp Business.
+      Have questions about TalkyMate, payments, or your account? Reach out to us using the details below or fill out the contact form.
     </p>
-    <a [href]="whatsappLink" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-      <span class="whatsapp-icon">WhatsApp</span>
-      Chat on WhatsApp
-    </a>
-  </div>
+
+    <div class="info-items">
+      <div class="info-item">
+        <span class="info-label">Email ID</span>
+        <a [href]="'mailto:' + site.email" class="info-value">{{ site.email }}</a>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Support Email</span>
+        <a [href]="'mailto:' + site.supportEmail" class="info-value">{{ site.supportEmail }}</a>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Phone</span>
+        <a [href]="phoneLink" class="info-value">{{ site.phone }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-form-section">
+    <h2 class="form-title">Contact Form</h2>
+
+    @if (submitted) {
+      <div class="form-success">
+        Thank you for contacting TalkyMate. We have received your message and will respond within 24–48 hours.
+      </div>
+    } @else {
+      <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" [(ngModel)]="form.name" required placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" [(ngModel)]="form.email" required placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" [(ngModel)]="form.subject" required placeholder="How can we help?" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" [(ngModel)]="form.message" required placeholder="Write your message here..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" [disabled]="contactForm.invalid">Send Message</button>
+      </form>
+    }
+  </section>
 </div>

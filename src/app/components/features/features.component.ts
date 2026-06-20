@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 })
 export class FeaturesComponent {
   features = [
-    { title: 'Chatting', desc: 'Real-time text chat with your connections.', icon: '💬' },
-    { title: 'Messaging', desc: 'Send messages and stay in touch anytime.', icon: '✉️' },
-    { title: 'Audio Call', desc: 'Clear voice calls for a personal touch.', icon: '🎧' },
-    { title: 'Video Call', desc: 'Face-to-face video for real connection.', icon: '📹' },
+    { title: 'Voice Calls', desc: 'Instant voice connections with hosts for pure entertainment.', icon: '🎙️' },
+    { title: 'Live Hosts', desc: 'Browse available hosts and start a call in seconds.', icon: '🌟' },
+    { title: 'Safe & Private', desc: 'Entertainment-focused platform with community guidelines.', icon: '🔒' },
+    { title: 'Easy Wallet', desc: 'Simple credits system — recharge and call anytime.', icon: '💳' },
   ];
 }
