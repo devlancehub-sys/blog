@@ -1,8 +1,8 @@
 export const SITE = {
   name: 'TalkyMate',
   tagline: 'Voice Call Entertainment',
-  email: 'contact@talkymate.com',
-  supportEmail: 'support@talkymate.com',
+  email: 'admin@talkymate.in',
+  supportEmail: 'support@talkymate.in',
   address: 'India',
-  lastUpdated: 'June 2026',
+  lastUpdated: 'Jul 2025',
 } as const;
