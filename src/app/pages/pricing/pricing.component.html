@@ -3,53 +3,40 @@
   <div class="content-background" role="presentation"></div>
   <div class="content-wrapper">
     <app-navbar />
-    <main class="content-main pricing-main">
-      <h1 class="page-title">Pricing &amp; Services</h1>
+    <main class="content-main">
+      <h1 class="page-title">Coin Packs &amp; Pricing</h1>
       <p class="page-intro">
-        TalkyMate provides voice-call entertainment services. Recharge your wallet with credits and use them for voice calls with hosts.
+        TalkyMate uses coins to unlock premium AI status videos. Purchase coin packs below and use them inside the app.
       </p>
+      <div class="pricing-grid">
+        @for (plan of plans; track plan.name) {
+          <div class="pricing-card" [class.popular]="plan.popular">
+            @if (plan.popular) {
+              <span class="popular-badge">Most Popular</span>
+            }
+            <h2>{{ plan.name }}</h2>
+            <p class="price">₹{{ plan.price }}</p>
+            <p class="credits">{{ plan.credits }} coins</p>
+            <p class="plan-desc">{{ plan.description }}</p>
+          </div>
+        }
+      </div>
+      <p class="pricing-note">All prices are in INR (₹). Coins are credited after successful payment.</p>
 
-      <section class="services-section">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-          @for (service of services; track service.title) {
-            <article class="service-card">
-              <h3>{{ service.title }}</h3>
-              <p>{{ service.desc }}</p>
-            </article>
-          }
-        </div>
-      </section>
-
-      <section class="pricing-section">
-        <h2 class="section-title">Wallet Recharge Plans</h2>
-        <p class="pricing-note">All prices are in INR (₹). Credits are added to your TalkyMate wallet after successful payment.</p>
-        <div class="pricing-grid">
-          @for (plan of plans; track plan.name) {
-            <article class="pricing-card" [class.popular]="plan.popular">
-              @if (plan.popular) {
-                <span class="popular-badge">Most Popular</span>
-              }
-              <h3 class="plan-name">{{ plan.name }}</h3>
-              <p class="plan-price">₹{{ plan.price }}</p>
-              <p class="plan-credits">{{ plan.credits }} Credits</p>
-              <p class="plan-desc">{{ plan.description }}</p>
-            </article>
-          }
-        </div>
-      </section>
-
-      <section class="content-body billing-info">
-        <h2>Billing Information</h2>
+      <div class="content-body">
+        <h2>Included Services</h2>
+        @for (service of services; track service.title) {
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.desc }}</p>
+        }
+        <h2>Important Notes</h2>
         <ul>
-          <li>Voice calls are charged per minute based on the host rate.</li>
-          <li>Credits are deducted from your wallet during active calls.</li>
-          <li>Payments are processed securely through Cashfree payment gateway.</li>
-          <li>Unused wallet credits remain in your account until used.</li>
-          <li>For refund details, see our <a routerLink="/refund">Refund &amp; Cancellation Policy</a>.</li>
+          <li>Coins are digital credits for in-app premium video access only.</li>
+          <li>Free videos can be browsed and watched without spending coins where marked free.</li>
+          <li>TalkyMate does not provide dating, chatting, or real live video calling.</li>
+          <li>Unused coins remain in your account until used, subject to our refund policy.</li>
         </ul>
-        <p>Questions about pricing? Contact us at <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a>.</p>
-      </section>
+      </div>
     </main>
     <app-footer />
   </div>

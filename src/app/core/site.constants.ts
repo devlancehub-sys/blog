@@ -1,8 +1,9 @@
 export const SITE = {
   name: 'TalkyMate',
-  tagline: 'Voice Call Entertainment',
-  email: 'contact@talkymate.com',
-  supportEmail: 'support@talkymate.com',
+  tagline: 'Viral AI Video Status',
+  website: 'https://talkymate.in',
+  email: 'contact@talkymate.in',
+  supportEmail: 'support@talkymate.in',
   address: 'India',
-  lastUpdated: 'June 2026',
+  lastUpdated: 'August 2026',
 } as const;

@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
-import { SITE } from '../../core/site.constants';
 
 interface PricingPlan {
   name: string;
@@ -15,21 +13,21 @@ interface PricingPlan {
 @Component({
   selector: 'app-pricing',
   standalone: true,
-  imports: [RouterLink, NavbarComponent, FooterComponent],
+  imports: [NavbarComponent, FooterComponent],
   templateUrl: './pricing.component.html',
-  styleUrl: './pricing.component.scss'
+  styleUrl: './pricing.component.scss',
 })
 export class PricingComponent {
-  site = SITE;
-
   plans: PricingPlan[] = [
-    { name: 'Basic', price: 49, credits: 49, description: 'Quick recharge to start voice call entertainment.' },
-    { name: 'Standard', price: 99, credits: 99, description: 'Best value for regular TalkyMate voice calls.', popular: true },
+    { name: 'Starter', price: 49, credits: 49, description: 'A quick coin top-up to unlock premium videos.' },
+    { name: 'Popular', price: 99, credits: 99, description: 'Best value for regular TalkyMate viewers.', popular: true },
+    { name: 'Premium', price: 299, credits: 312, description: 'More coins plus bonus value for frequent watchers.' },
+    { name: 'Mega', price: 599, credits: 636, description: 'Large coin pack with bonus coins included.' },
   ];
 
   services = [
-    { title: 'Voice Call Entertainment', desc: 'Connect with hosts for fun, friendly voice conversations. Billed per minute from your wallet credits.' },
-    { title: 'Wallet Recharge', desc: 'Add credits to your TalkyMate wallet via secure online payment (Cashfree).' },
-    { title: 'Call History', desc: 'View past calls and reconnect with hosts you enjoyed.' },
+    { title: 'Coin Packs', desc: 'Purchase coins securely and use them to unlock premium AI status videos.' },
+    { title: 'Premium Video Access', desc: 'Spend coins only on selected premium content — free videos remain available to browse.' },
+    { title: 'Watch History', desc: 'Revisit videos you have already watched inside the app.' },
   ];
 }

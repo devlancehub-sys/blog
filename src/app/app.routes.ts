@@ -9,5 +9,6 @@ export const routes: Routes = [
   { path: 'privacy', loadComponent: () => import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent) },
   { path: 'terms', loadComponent: () => import('./pages/terms/terms.component').then(m => m.TermsComponent) },
   { path: 'refund', loadComponent: () => import('./pages/refund/refund.component').then(m => m.RefundComponent) },
+  { path: 'delete-account', loadComponent: () => import('./pages/delete-account/delete-account.component').then(m => m.DeleteAccountComponent) },
   { path: '**', redirectTo: '' }
 ];

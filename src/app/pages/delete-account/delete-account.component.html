@@ -1,0 +1,82 @@
+<div class="content-page">
+  <div class="content-overlay"></div>
+  <div class="content-background" role="presentation"></div>
+  <div class="content-wrapper">
+    <app-navbar />
+    <main class="content-main">
+      <h1 class="page-title">Delete Account</h1>
+      <p class="page-intro">
+        Last updated: {{ site.lastUpdated }}. Learn how to permanently delete your TalkyMate account and what happens to your data.
+      </p>
+
+      <div class="notice-card">
+        <strong>Important:</strong> Account deletion is permanent. Your profile, coin balance, watch history, and related data cannot be recovered.
+      </div>
+
+      <div class="content-body">
+        <h2>1. Who Can Request Deletion</h2>
+        <p>Any registered TalkyMate user may request account deletion, including:</p>
+        <ul>
+          <li><strong>Viewer app users</strong> — users who browse videos and purchase coins</li>
+          <li><strong>Creator app users</strong> — users who upload or publish AI status videos</li>
+        </ul>
+
+        <h2>2. How to Delete Your Account</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-number">1</span>
+            <h3>Email support</h3>
+            <p>Send a request to <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a> with subject <strong>Account Deletion Request</strong>.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">2</span>
+            <h3>Include account details</h3>
+            <p>Your registered name, username/phone, app type (Viewer or Creator), and confirmation that deletion should be permanent.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">3</span>
+            <h3>Verification</h3>
+            <p>Our team may verify ownership before processing your request.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-number">4</span>
+            <h3>Confirmation</h3>
+            <p>You will receive an email once deletion is complete, usually within 7–15 business days.</p>
+          </div>
+        </div>
+
+        <p class="cta-row">
+          <a class="cta-button" [href]="deleteMailto">Request Account Deletion</a>
+        </p>
+
+        <h2>3. Before You Delete</h2>
+        <ul>
+          <li>Use remaining coins or request help if a payment issue occurred</li>
+          <li>Creators: withdraw pending earnings before deletion where applicable</li>
+          <li>Log out from all devices after confirmation</li>
+        </ul>
+
+        <h2>4. What Gets Deleted</h2>
+        <ul>
+          <li>Profile information and login credentials</li>
+          <li>Coin balance and purchase history linked to your account</li>
+          <li>Watch history and saved preferences</li>
+          <li>Creator uploads and payout account details where applicable</li>
+        </ul>
+
+        <h2>5. What TalkyMate Is Not</h2>
+        <p>
+          TalkyMate is not a dating, chat, or live video-calling service. Deleting your account removes your access
+          to the video status platform only.
+        </p>
+
+        <h2>6. Contact</h2>
+        <p>
+          Email: <a [href]="'mailto:' + site.supportEmail">{{ site.supportEmail }}</a><br />
+          Website: <a href="https://talkymate.in" target="_blank" rel="noopener">talkymate.in</a>
+        </p>
+      </div>
+    </main>
+    <app-footer />
+  </div>
+</div>

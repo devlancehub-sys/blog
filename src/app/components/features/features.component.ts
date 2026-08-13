@@ -5,13 +5,13 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './features.component.html',
-  styleUrl: './features.component.scss'
+  styleUrl: './features.component.scss',
 })
 export class FeaturesComponent {
   features = [
-    { title: 'Voice Calls', desc: 'Instant voice connections with hosts for pure entertainment.', icon: '🎙️' },
-    { title: 'Live Hosts', desc: 'Browse available hosts and start a call in seconds.', icon: '🌟' },
-    { title: 'Safe & Private', desc: 'Entertainment-focused platform with community guidelines.', icon: '🔒' },
-    { title: 'Easy Wallet', desc: 'Simple credits system — recharge and call anytime.', icon: '💳' },
+    { title: 'Viral AI Videos', desc: 'Browse trending AI-generated status videos curated for quick entertainment.', icon: '🎬' },
+    { title: 'Video Player UI', desc: 'Watch through an immersive player designed to feel like a premium viewing session.', icon: '▶️' },
+    { title: 'Coin Unlocks', desc: 'Use coins to watch selected premium videos — simple and transparent.', icon: '🪙' },
+    { title: 'Secure Payments', desc: 'Buy coin packs through our trusted payment gateway anytime.', icon: '💳' },
   ];
 }
