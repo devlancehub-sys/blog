@@ -1,6 +1,6 @@
-# LadyLive
+# TalkyMate Website
 
-Static landing site for LadyLive – dating / live chat style. Dark theme, pink–purple gradients, light animations.  
+Static landing site for TalkyMate — viral AI video status entertainment platform. Dark theme, pink–purple gradients, light animations.  
 **Pages:** Home, Contact / Agent. **Logo:** `public/images/logo.png`.  
 To use a **second image as Contact page background**, add it to `public/images/` (e.g. `contact-bg.png`) and in `contact.component.scss` set `.contact-background { background: url('/images/contact-bg.png') ... }`.  
 **WhatsApp:** Update `whatsappLink` in `contact-card.component.ts` with your Business number (e.g. `https://wa.me/919876543210`).
@@ -29,6 +29,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## sfsdfsdfFurther help
+## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.# blog
